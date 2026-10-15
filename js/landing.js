@@ -663,3 +663,4 @@ const LandingPageView = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { LandingPageView };
 }
+
