@@ -89,7 +89,6 @@ const App = {
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href') || '';
       if (href === `#${routeName}` || 
-          (routeName === 'dashboard' && href === '#dashboard') ||
           (routeName === 'simulator' && href.startsWith('#simulator'))) {
         link.classList.add('active');
       } else {
@@ -99,7 +98,7 @@ const App = {
   },
 
   parseHash() {
-    const hash = window.location.hash.substring(1) || 'dashboard';
+    const hash = window.location.hash.substring(1) || 'home';
     const [pathPart, queryPart] = hash.split('?');
     const segments = pathPart.split('/').filter(Boolean);
 
@@ -112,7 +111,7 @@ const App = {
     }
 
     return {
-      base: segments[0] || 'dashboard',
+      base: segments[0] || 'home',
       id: segments[1] || null,
       params
     };
@@ -125,6 +124,10 @@ const App = {
     this.updateActiveNavLink(base);
 
     switch (base) {
+      case 'home':
+        LandingPageView.render(this.mainContainer);
+        break;
+
       case 'dashboard':
         DashboardView.render(this.mainContainer);
         break;
@@ -177,7 +180,7 @@ const App = {
         break;
 
       default:
-        DashboardView.render(this.mainContainer);
+        LandingPageView.render(this.mainContainer);
         break;
     }
   }

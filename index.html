@@ -25,21 +25,17 @@
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#dashboard" class="brand">
-        <svg class="brand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="#home" class="brand">
+        <svg class="brand-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="16 18 22 12 16 6"></polyline>
           <polyline points="8 6 2 12 8 18"></polyline>
         </svg>
         <span class="brand-text">CompanyQ</span>
+        <span class="brand-badge">PRO</span>
       </a>
 
       <!-- Navigation Links -->
       <ul id="nav-links" class="nav-links">
-        <li>
-          <a href="#dashboard" class="nav-link active">
-            Dashboard
-          </a>
-        </li>
         <li>
           <a href="#directory" class="nav-link">
             Companies
@@ -47,12 +43,12 @@
         </li>
         <li>
           <a href="#simulator/amazon-sde-oa" class="nav-link">
-            Assessments
+            Mock Assessments
           </a>
         </li>
         <li>
           <a href="#interview" class="nav-link">
-            Interview Prep
+            Interview Preparation
           </a>
         </li>
         <li>
@@ -62,8 +58,12 @@
         </li>
       </ul>
 
-      <!-- Action items: Theme Toggle and Mobile Menu Toggle -->
+      <!-- Action items: Explore Companies CTA, Theme Toggle, Mobile Menu -->
       <div class="nav-actions">
+        <a href="#directory" class="btn btn-primary nav-cta-btn">
+          Explore Companies
+        </a>
+
         <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme (Light / Dark)">
           <svg id="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
@@ -120,6 +120,7 @@
   <script src="js/storage.js"></script>
 
   <!-- 3. Views -->
+  <script src="js/landing.js"></script>
   <script src="js/dashboard.js"></script>
   <script src="js/directory.js"></script>
   <script src="js/profile.js"></script>
